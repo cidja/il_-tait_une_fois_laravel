@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
   <head>
     <meta charset='{{config('app.charset')}}'>
@@ -39,5 +40,6 @@
       </div>
       </section>
     </section>
+  
   </body>
 </html>

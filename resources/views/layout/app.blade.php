@@ -109,6 +109,7 @@
     </nav>
     </header>
     <body>
+      <a href="{{ route('allNovels')}}">tous les romans</a>
     @yield('content')
 </body>
 </html>

@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('pages.home');
 })->name('home');
 
-Route::get('/romans', function () {
+Route::get('/accueil-romans', function () {
   return view('pages.frontend.allNovels');
 })->name('allNovels');

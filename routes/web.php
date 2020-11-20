@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('pages.home');
 })->name('home');
 
-Route::get('/accueil-romans', function () {
-  return view('pages.frontend.allNovels');
-})->name('allNovels');
+Route::get('/register', function() {
+  return view('pages.frontend.register');
+})->name('register');
+
+Route::get('/login', function() {
+  return view('pages.frontend.login');
+})->name('login');

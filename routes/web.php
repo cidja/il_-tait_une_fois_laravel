@@ -24,3 +24,7 @@ Route::get('/register', function() {
 Route::get('/login', function() {
   return view('pages.frontend.login');
 })->name('login');
+
+Route::get('/welcome', function(){
+  return view('pages.frontend.welcome');
+})->name('welcome');

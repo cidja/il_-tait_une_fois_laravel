@@ -12,7 +12,7 @@
         <nav class="p-6 bg-white flex justify-between mb-6">
           <ul class="flex items-center">
             <li>
-              <a href="" class="p-3">Accueil</a>
+              <a href="{{ route('welcome') }}" class="p-3">Accueil</a>
             </li>
             <li>
               <a href="" class="p-3">Livre en cours</a>
@@ -21,13 +21,13 @@
               <a href="{{ route('statistics') }}" class="p-3">Statistiques</a>
             </li>
             <li>
-              <a href="" class="p-3">Ajout</a>
+              <a href="{{  route('addNovel') }}" class="p-3">Ajout</a>
             </li>
           </ul>
 
           <ul class="flex items-center">
             <li>
-              <a href="" class="p-3">Mon compte</a>
+              <a href="{{ route('account') }}" class="p-3">Mon compte</a>
             </li>
             <li>
               <a href="" class="p-3">Deconnexion</a>

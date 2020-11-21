@@ -30,9 +30,17 @@ Route::get('/welcome', function(){
 })->name('welcome');
 
 Route::get('/novel', function(){
-  return view('pages.frontend.onenovel');
+  return view('pages.frontend.oneNovel');
 })->name('novel');
 
 Route::get('/statistics', function(){
   return view('pages.frontend.statistics');
 })->name('statistics');
+
+Route::get('/addNovel', function(){
+  return view('pages.frontend.addNovel');
+})->name('addNovel');
+
+Route::get('/account', function(){
+  return view('pages.frontend.account');
+})->name('account');

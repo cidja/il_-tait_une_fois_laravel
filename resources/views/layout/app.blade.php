@@ -30,7 +30,7 @@
               <a href="{{ route('account') }}" class="p-3">Mon compte</a>
             </li>
             <li>
-              <a href="" class="p-3">Deconnexion</a>
+              <a href="{{  route('home') }}" class="p-3">Deconnexion</a>
             </li>
           </ul>
         </nav>

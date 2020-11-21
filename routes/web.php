@@ -28,3 +28,11 @@ Route::get('/login', function() {
 Route::get('/welcome', function(){
   return view('pages.frontend.welcome');
 })->name('welcome');
+
+Route::get('/novel', function(){
+  return view('pages.frontend.onenovel');
+})->name('novel');
+
+Route::get('/statistics', function(){
+  return view('pages.frontend.statistics');
+})->name('statistics');

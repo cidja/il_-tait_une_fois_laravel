@@ -16,18 +16,18 @@ class CreateNovelsTable extends Migration
         Schema::create('novels', function (Blueprint $table) {
               $table->id();
               $table->char('title', 200);
-              $table->char('serie', 150);
+              $table->char('author', 150);
               $table->bigInteger('isbn');
               $table->char('genre',100);
               $table->bigInteger('page_count');
-              $table->bigInteger('volume_number');
+              $table->bigInteger('volume_number')->default(0);
               $table->bigInteger('finish')->default(0);
-              $table->string('comment');
+              $table->longText('comment');
               $table->bigInteger('rate');
               $table->char('cover', 250);
-              $table->Date('creation_date');
-              $table->Date('begin_date');
-              $table->Date('end_date');
+              $table->datetime('creation_date', 0)->default('2020-11-22 10:00:00');
+              $table->datetime('begin_date', 0)->default('2020-11-22 10:00:00');
+              $table->datetime('end_date', 0)->default('2020-11-22 10:00:00');
               $table->timestamps();
         });
     }

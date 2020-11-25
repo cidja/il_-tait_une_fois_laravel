@@ -8,14 +8,15 @@ use Illuminate\Support\Facades\DB;
 class NovelsController extends Controller
 {
     //
-    function show(){
-      $data= DB::table("novels")->get();
+    function show(){ //https://laravel.com/docs/8.x/pagination#displaying-pagination-results
+      $data= DB::table("novels")->orderBY('id','desc')->simplePaginate(10);
       //$data = Novel::all();
       return view('pages.frontend.welcome',['novels'=>$data]);
     }
 
-    function onlyOne(){
-      $data= DB::table("novels")->find(3);
+    function onlyOne(){ //https://laravel.com/docs/8.x/queries#retrieving-a-single-row-column-from-a-table
+      $data= DB::table("novels")->where('id',1)->first();
       return view('pages.frontend.singleNovel',['novels'=>$data]);
     }
+
 }

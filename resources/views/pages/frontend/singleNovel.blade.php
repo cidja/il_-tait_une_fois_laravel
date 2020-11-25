@@ -10,10 +10,11 @@
   <!--Formulaire de recherche en haut de la page !-->
 
     <h2>Affichage  du roman</h2>
-  @foreach ($novels as $novel)
-    {{ $novel->author }}
-  @endforeach
+  {{$novels->title}} <br />
 
+  son auteur est : {{ $novels->author }}
+
+  
 
 
 

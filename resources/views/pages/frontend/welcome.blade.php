@@ -17,18 +17,23 @@
 
   <section>
     <h2>Affichage des 10 derniers romans</h2>
-    <div class="container">
+    <div class="container mx-auto">
       @foreach($novels as $novel)
-        <div class="title">
-          titre de l'ouvrage : <span>{{ $novel->title }}</span>
+        <div class="container allnovel mb-4">
+          <div class="cover w-40 mx-auto">
+            <img src="{{ $novel->cover }}" alt="couverture du livre">
+          </div>
+          <div class="title flex flex-row justify-center">
+            <div class="mr-4">titre de l'ouvrage :</div>
+            <div>{{ $novel->title }}</div>
+          </div>
+          <div class="author flex flex-row justify-center">
+            <div class="mr-4">Auteur : </div>
+            <div>{{ $novel->author }} </div>
+          </div>
+          <a href="{{route('singleNovel')}}">en savoir plus</a>
         </div>
-        <div class="author">
-          Auteur : <span>{{  $novel->author }}</span>
-        </div>
-        <br/>
-
-
-    @endforeach
+@endforeach
     </div>
     {{ $novels->links() }}
 

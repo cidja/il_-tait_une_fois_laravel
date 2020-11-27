@@ -31,7 +31,8 @@
             <div class="mr-4">Auteur : </div>
             <div>{{ $novel->author }} </div>
           </div>
-          <a href="{{route('singleNovel')}}">en savoir plus</a>
+          <a href="{{URL::to('pages.frontend.singleNovel')}}">en savoir plus</a>
+
         </div>
 @endforeach
     </div>

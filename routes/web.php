@@ -34,6 +34,15 @@ Route::get('/welcome',[NovelsController::class, "show"])->name('welcome');
 
 Route::get("/singleNovel/{id}", [NovelsController::class, "onlyOne"])->name('singleNovel');
 
+
+Route::get("getTest", function ($id){
+  return view('pages.frontend.getTest');
+}
+
+Route::get("test/{id}", function($id=8){
+  echo "l'id est : " . $id;
+})->name('test');
+
 Route::get('/novel', function(){
   return view('pages.frontend.oneNovel');
 })->name('novel'); // to display information for one novel

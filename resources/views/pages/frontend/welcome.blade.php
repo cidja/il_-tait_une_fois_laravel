@@ -21,7 +21,17 @@
       @foreach($novels as $novel)
         <div class="container allnovel mb-4">
           <div class="cover w-40 mx-auto">
-            <img src="{{ $novel->cover }}" alt="couverture du livre">
+
+          @php //to display a php 
+          $cover = null; // to initiate the $cover
+            if(!empty($novel->cover)){
+              $cover = $novel->cover;
+            }else{
+              $cover = "/images/oups.png";
+            }
+          @endphp
+         
+            <img src="{{ $cover }}" alt="couverture du livre">
           </div>
           <div class="title flex flex-row justify-center">
             <div class="mr-4">titre de l'ouvrage :</div>
@@ -31,7 +41,10 @@
             <div class="mr-4">Auteur : </div>
             <div>{{ $novel->author }} </div>
           </div>
-          <a href="{{URL::to('pages.frontend.singleNovel')}}">en savoir plus</a>
+          <div class="more flex flex-row justify-center">
+            <a class="bg-green-300 p-2 rounded-md text-gray-50 hover:text-black" href="{{URL::to('pages.frontend.singleNovel')}}">en savoir plus</a>
+          </div>
+          
 
         </div>
 @endforeach

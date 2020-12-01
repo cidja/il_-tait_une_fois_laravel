@@ -37,7 +37,7 @@ Route::get("/singleNovel/{id}", [NovelsController::class, "onlyOne"])->name('sin
 
 Route::get("getTest", function ($id){
   return view('pages.frontend.getTest');
-}
+});
 
 Route::get("test/{id}", function($id=8){
   echo "l'id est : " . $id;

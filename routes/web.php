@@ -43,9 +43,10 @@ Route::get("test/{id}", function($id=8){
   echo "l'id est : " . $id;
 })->name('test');
 
-Route::get('/novel', function(){
-  return view('pages.frontend.oneNovel');
-})->name('novel'); // to display information for one novel
+/* Route::get('/novel-{id}', function($id){
+  //return view('pages.frontend.oneNovel');
+  return $id;
+})->name('novel'); // to display information for one novel */
 
 Route::get('/statistics', function(){
   return view('pages.frontend.statistics');

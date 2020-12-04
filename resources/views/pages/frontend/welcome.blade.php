@@ -42,7 +42,7 @@
             <div>{{ $novel->author }} </div>
           </div>
           <div class="more flex flex-row justify-center">
-            <a class="bg-green-300 p-2 rounded-md text-gray-50 hover:text-black" href="{{URL::to('pages.frontend.singleNovel')}}">en savoir plus</a>
+            <a class="bg-green-300 p-2 rounded-md text-gray-50 hover:text-black" href="{{  route('singleNovel', [$novel->id])  }}">en savoir plus</a>
           </div>
           
 

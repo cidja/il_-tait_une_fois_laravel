@@ -10,7 +10,9 @@
   <!--Formulaire de recherche en haut de la page !-->
 
     <h2>Affichage  du roman</h2>
-
+    <div class="id">
+     id : {{ $novels->id  }}
+    </div>
     <div class="container allnovel mb-4">
       <div class="cover w-40 mx-auto">
         <img src="{{ $novels->cover }}" alt="couverture du livre">

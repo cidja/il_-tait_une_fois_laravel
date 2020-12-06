@@ -25,9 +25,9 @@ class CreateNovelsTable extends Migration
               $table->longText('comment');
               $table->bigInteger('rate');
               $table->char('cover', 250);
-              $table->datetime('creation_date', 0)->default('2020-11-22 10:00:00');
-              $table->datetime('begin_date', 0)->default('2020-11-22 10:00:00');
-              $table->datetime('end_date', 0)->default('2020-11-22 10:00:00');
+              $table->datetime('creation_date', 0);//->default('2020-11-22 10:00:00')
+              $table->datetime('begin_date', 0);//->default('2020-11-22 10:00:00');
+              $table->datetime('end_date', 0);//->default('2020-11-22 10:00:00');
               $table->timestamps();
         });
     }

@@ -11,38 +11,53 @@
 
     <h2>Affichage  du roman</h2>
     <div class="id">
-     id : {{ $novels->id  }}
+     id : {{ $novel->id  }}
     </div>
     <div class="container allnovel mb-4">
       <div class="cover w-40 mx-auto">
-        <img src="{{ $novels->cover }}" alt="couverture du livre">
-      </div>
+
+          @php //to display a php 
+          $cover = null; // to initiate the $cover
+            if(!empty($novel->cover)){
+              $cover = $novel->cover;
+            }else{
+              $cover = "/images/oups.png";
+            }
+          @endphp
+         
+            <img src="{{ $cover }}" alt="couverture du livre">
+          </div>
       <div class="title flex flex-row justify-center">
-        <div class="mr-4">titre de l'ouvrage :</div>
-        <div>{{ $novels->title }}</div>
+        <div class="mr-4">Titre de l'ouvrage :</div>
+        <div>{{ $novel->title }}</div>
       </div>
       <div class="author flex flex-row justify-center">
         <div class="mr-4">Auteur : </div>
-        <div>{{ $novels->author }} </div>
+        <div>{{ $novel->author }} </div>
       </div>
       <div class="isbn flex flex-row justify-center">
-        <div class="mr-4">isbn : </div>
-        <div>{{ $novels->isbn }} </div>
+        <div class="mr-4">Isbn : </div>
+        <div>{{ $novel->isbn }} </div>
       </div>
       <div class="genre flex flex-row justify-center">
-        <div class="mr-4">genre : </div>
-        <div>{{ $novels->genre }} </div>
+        <div class="mr-4">Genre : </div>
+        <div>{{ $novel->genre }} </div>
       </div>
       <div class="creation_date flex flex-row justify-center">
-        <div class="mr-4">ajouté le : </div>
-        <div>{{ $novels->creation_date }} </div>
+        <div class="mr-4">Ajouté le : </div>
+        <div>
+          @php //to display date in format that I want
+            $begindate = new DateTime($novel->creation_date);
+            echo $begindate->format("d/m/Y à H:m");
+          @endphp  
+        </div>
       </div>
       <div class="comment flex flex-row justify-center">
         <div class="mr-4">Commentaire : </div>
         <div>
         <?php
-        if(!empty($novels->comment)){
-          echo $novels->comment;
+        if(!empty($novel->comment)){
+          echo $novel->comment;
         }else{
           echo "pas de commentaire";
         } ?> </div>

@@ -16,7 +16,7 @@ class NovelsController extends Controller
 
     function onlyOne($id){ //https://laravel.com/docs/8.x/queries#retrieving-a-single-row-column-from-a-table
       $data= DB::table("novels")->where('id',$id)->first();
-      return view('pages.frontend.singleNovel',['novels'=>$data]);
+      return view('pages.frontend.singleNovel',['novel'=>$data]);
     }
 
 }

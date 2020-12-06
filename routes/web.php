@@ -34,20 +34,6 @@ Route::get('/welcome',[NovelsController::class, "show"])->name('welcome');
 
 Route::get("/singleNovel/{id}", [NovelsController::class, "onlyOne"])->name('singleNovel');
 
-
-Route::get("getTest", function ($id){
-  return view('pages.frontend.getTest');
-});
-
-Route::get("test/{id}", function($id=8){
-  echo "l'id est : " . $id;
-})->name('test');
-
-/* Route::get('/novel-{id}', function($id){
-  //return view('pages.frontend.oneNovel');
-  return $id;
-})->name('novel'); // to display information for one novel */
-
 Route::get('/statistics', function(){
   return view('pages.frontend.statistics');
 })->name('statistics');// to display some statistics about your read

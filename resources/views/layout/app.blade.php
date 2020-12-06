@@ -9,7 +9,7 @@
   </head>
     <body class="flex flex-col h-full">
       <header>
-        <nav class="p-6 bg-white flex justify-between mb-6">
+        <nav class="p-6 bg-green-400 flex justify-between mb-6">
           <ul class="flex items-center">
             <li>
               <a href="{{ route('welcome') }}" class="p-3">Accueil</a>
@@ -39,7 +39,7 @@
           @yield('content')
         </div>
         <!-- to put footer sticky https://milanchheda.com/sticky-footer-using-tailwind-css !-->
-        <footer class=" w-full bg-gray-500  text-center pin-b ">
+        <footer class=" w-full bg-green-400  text-center pin-b ">
           <div>
             Projet réalisé par Christian GEORGES sous Laravel 8
           </div>

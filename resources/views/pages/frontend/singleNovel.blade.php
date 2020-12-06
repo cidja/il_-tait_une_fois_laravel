@@ -9,11 +9,14 @@
 
   <!--Formulaire de recherche en haut de la page !-->
 
-    <h2>Affichage  du roman</h2>
-    <div class="id">
-     id : {{ $novel->id  }}
-    </div>
+    
     <div class="container allnovel mb-4">
+    <h2>
+      Affichage  du roman
+    </h2>
+    <div class="id">
+      id : {{ $novel->id  }}
+    </div>
       <div class="cover w-40 mx-auto">
 
           @php //to display a php 

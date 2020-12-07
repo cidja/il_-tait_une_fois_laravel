@@ -42,6 +42,8 @@ Route::get('/addNovel', function(){
   return view('pages.frontend.addNovel');
 })->name('addNovel'); // to add novel
 
+Route::post('/addNovel', [NovelsController::class , 'store'])->name('addNovel');
+
 Route::get('/account', function(){
   return view('pages.frontend.account');
 })->name('account'); // to manage your account

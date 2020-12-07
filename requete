@@ -1,0 +1,11 @@
+link: https://stackoverflow.com/questions/35565128/mysql-incorrect-datetime-value-0000-00-00-000000
+do before 
+SET SQL_MODE='ALLOW_INVALID_DATES';
+INSERT INTO novels(title,author,isbn,format,genre,page_count,active,finish,comment,rate,
+cover,creation_date,begin_date,end_date) SELECT title,author,isbn,publication,genre,page_count,active,finish,comment,rate,
+cover,creation_date,begin_date,end_date FROM novel;
+
+
+for creation_date import
+INSERT INTO novels(creation_date) SELECT creation_date FROM novel;
+

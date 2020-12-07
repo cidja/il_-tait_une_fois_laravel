@@ -19,7 +19,7 @@
     <h2 class="text-center my-5 text-lg">Affichage des 10 derniers romans</h2>
     <div class="container mx-auto">
       @foreach($novels as $novel)
-        <div class="container allnovel mb-4 py-10 bg-gradient-to-r from-green-400 to-blue-500 rounded-md ">
+        <div class="container allnovel mb-4 py-10 bg-gradient-to-r from-green-400 to-blue-500 rounded-md">
           <div class="cover w-40 mx-auto">
 
           @php //to display a php 

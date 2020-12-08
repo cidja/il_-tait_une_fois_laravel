@@ -9,4 +9,5 @@ class Novel extends Model
 {
     use HasFactory;
     protected $table = "novels";
+    protected $fillable=['title','author','isbn','genre','format','page_count','cover'];
 }

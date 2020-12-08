@@ -32,8 +32,8 @@
       </select>
     </div>
     <div class="input-add m-4 flex justify-between">
-      <label for="pages-count">nombre de pages</label>
-      <input type="number" min="1" name="pages-count" id="pages-count">
+      <label for="pageCount">nombre de pages</label>
+      <input type="number" min="1" name="pageCount" id="pageCount">
     </div>
     <div class="input-add m-4 flex justify-between">
       <label for="cover">Couverture</label>

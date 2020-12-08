@@ -26,9 +26,7 @@ Route::get('/login', function() {
   return view('pages.frontend.login');
 })->name('login'); // if you want login
 
-/*Route::get('/welcome', function(){
-  return view('pages.frontend.welcome');
-})->name('welcome'); //after login it's welcome page*/
+
 Route::get('/welcome',[NovelsController::class, "show"])->name('welcome');
 //link video to display data https://www.youtube.com/watch?v=y3p10h_00A8&ab_channel=phpstepbystep
 

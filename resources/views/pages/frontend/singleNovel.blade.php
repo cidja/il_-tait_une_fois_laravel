@@ -59,18 +59,25 @@
         <div class="mr-4">Commentaire : </div>
         <div>
         <?php
-        if(!empty($novel->comment)){
-          echo $novel->comment;
-        }else{
-          echo "pas de commentaire";
-        } ?> </div>
+          if(!empty($novel->comment)){
+            echo $novel->comment;
+          }else{
+            echo "pas de commentaire";
+          } ?> 
+        </div>
       </div>
 
-
-
-
-
-
-
-
+        <div class="container flex flex-row justify-around">
+          <div class="">
+            <a class="bg-green-600 p-2 rounded-md text-gray-50 hover:text-black" href="{{  route('singleNovel', [$novel->id])  }}">
+              modifier
+            </a>
+          </div>
+          <div class="">
+            <a class="bg-red-600 p-2 rounded-md text-gray-50 hover:text-black" href="{{  route('singleNovel', [$novel->id])  }}">
+              effacer
+            </a>
+          </div>
+        </div>
+      </div>
 @endsection

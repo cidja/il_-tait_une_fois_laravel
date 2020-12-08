@@ -51,7 +51,7 @@
         </div>
 @endforeach
     </div>
-    {{ $novels->links() }}
+    {{ $novels ->links() }}
 
   </section>
 

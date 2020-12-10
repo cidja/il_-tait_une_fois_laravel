@@ -33,4 +33,11 @@ class NovelsController extends Controller
       return redirect()->route('welcome'); //view('pages.home');
     }
 
+    
+    function update(request $request){
+      $novel = NOvel::query()->update([
+        //
+      ]);
+    }
+
 }

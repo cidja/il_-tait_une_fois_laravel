@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class NovelsController extends Controller
 {
     //
-    function show(){ //https://laravel.com/docs/8.x/pagination#displaying-pagination-results
+    function index(){ //https://laravel.com/docs/8.x/pagination#displaying-pagination-results
       $data= DB::table("novels")->orderBY('id','desc')->simplePaginate(10);
       //$data = Novel::all();
       return view('pages.frontend.welcome',['novels'=>$data]);
@@ -30,7 +30,7 @@ class NovelsController extends Controller
         'page_count'  => $request['pageCount'],
         'cover'       => $request['cover']
       ]);
-      return view('/pages/frontend/addNovel'); //view('pages.home');
+      return redirect()->route('welcome'); //view('pages.home');
     }
 
 }

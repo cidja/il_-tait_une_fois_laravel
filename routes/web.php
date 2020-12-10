@@ -27,7 +27,7 @@ Route::get('/login', function() {
 })->name('login'); // if you want login
 
 
-Route::get('/welcome',[NovelsController::class, "show"])->name('welcome');
+Route::get('/welcome',[NovelsController::class, "index"])->name('welcome');
 //link video to display data https://www.youtube.com/watch?v=y3p10h_00A8&ab_channel=phpstepbystep
 
 Route::get("/singleNovel/{id}", [NovelsController::class, "onlyOne"])->name('singleNovel');

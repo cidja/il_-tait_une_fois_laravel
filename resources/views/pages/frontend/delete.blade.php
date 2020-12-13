@@ -23,7 +23,7 @@
       <label for="password">Rentrer le nom du roman comme inscrit au dessus pour confirmer la suppression : </label>
     </div>
     <div>
-      <input class='border-2 border-solid border-red-300 my-4' type="password" name="password" id="password">
+      <input class='border-2 border-solid border-red-300 my-4' type="password" name="password" id="password" autofocus>
     </div>
       <input type='hidden' name="id" value= '{{ $novel->id  }}'>
       <input type='hidden' name='title' value= '{{ $novel->title  }}'>

@@ -19,6 +19,11 @@ class NovelsController extends Controller
       return view('pages.frontend.singleNovel',['novel'=>$data]);
     }
 
+    function deleteview($id){
+      $novel = Novel::query()->Where('id',$id)->first();
+      return view('pages.frontend.delete',['novel'=>$novel]);
+    }
+
     public function store(request $request){
       //link video : https://www.youtube.com/watch?v=lPSg8LBFzZQ&list=PLMWEEzYqZ0em1vnBx8F5GZd94Ejph4TjO&index=12&ab_channel=ThibaudDauce
       $novel = Novel::query()->create([
@@ -35,9 +40,16 @@ class NovelsController extends Controller
 
     
     function update(request $request){
-      $novel = NOvel::query()->update([
+      $novel = Novel::query()->update([
         //
       ]);
+    }
+
+    function delete(request $request){
+      $novel = Novel::find(277);
+      $novel->delete();
+      return view('pages.frontend.delete');
+      //return redirect()->route('welcome');
     }
 
 }

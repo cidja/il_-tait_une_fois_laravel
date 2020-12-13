@@ -74,7 +74,7 @@
             </a>
           </div>
           <div class="">
-            <a class="bg-red-600 p-2 rounded-md text-gray-50 hover:text-black" href="{{  route('singleNovel', [$novel->id])  }}">
+            <a class="bg-red-600 p-2 rounded-md text-gray-50 hover:text-black" href="{{  route('deleteview', [$novel->id])  }}">
               effacer
             </a>
           </div>

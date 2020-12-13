@@ -32,6 +32,8 @@ Route::get('/welcome',[NovelsController::class, "index"])->name('welcome');
 
 Route::get("/singleNovel/{id}", [NovelsController::class, "onlyOne"])->name('singleNovel');
 
+Route::get("/delete/{id}", [NovelsController::class, "deleteview"])->name('deleteview');
+
 Route::get('/statistics', function(){
   return view('pages.frontend.statistics');
 })->name('statistics');// to display some statistics about your read

@@ -24,6 +24,19 @@ class NovelsController extends Controller
       return view('pages.frontend.delete',['novel'=>$novel]);
     }
 
+    function deleteConfirm(request $request){
+      $id = $request['id'];
+      $title = $request['title'];
+      if($request['password'] == $title){ //voir pour en faire avec le mot de passe de la 
+        $novel = Novel::query()->where('id', $id)->delete();
+      return redirect()->route('welcome');
+      }else
+      {
+        echo "mauvais mot de passe pour la suppression";
+      }
+      
+    }
+
     public function store(request $request){
       //link video : https://www.youtube.com/watch?v=lPSg8LBFzZQ&list=PLMWEEzYqZ0em1vnBx8F5GZd94Ejph4TjO&index=12&ab_channel=ThibaudDauce
       $novel = Novel::query()->create([

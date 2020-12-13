@@ -9,7 +9,7 @@
   @csrf
     <div class="input-add m-4 flex justify-between">
       <label for="title">Titre de l'ouvrage</label>
-      <input type="text" name="title" id="title">
+      <input type="text" name="title" id="title" autofocus>
     </div>
     <div class="input-add m-4 flex justify-between">
       <label for="author">Auteur de l'ouvrage</label>

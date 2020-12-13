@@ -40,11 +40,17 @@ Route::get('/statistics', function(){
   return view('pages.frontend.statistics');
 })->name('statistics');// to display some statistics about your read
 
-Route::get('/addNovel', function(){
+//to display form add novel
+Route::get('/addNovel', function(){ 
   return view('pages.frontend.addNovel');
 })->name('addNovel'); // to add novel
 
+//to use method store
 Route::post('/addNovel', [NovelsController::class , 'store'])->name('addNovel');
+
+//to find a novel
+Route::post('research', [NovelsController::class, 'search'])->name('search');
+
 
 Route::get('/account', function(){
   return view('pages.frontend.account');

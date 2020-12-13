@@ -9,7 +9,8 @@
 
   <!--Formulaire de recherche en haut de la page !-->
   <section>
-    <form class="" action="search" method="get">
+    <form class="" action=" {{ route('search') }} " method="post">
+      @csrf
       <input class="border-2 border-solid border-indigo-500 rounded-md py-1 px-2" type="text" name="search" placeholder="rentrez votre recherche"/>
       <input class="bg-indigo-400 py-2 px-8 rounded-full" type="submit" name="submitSearch" value="valider" />
     </form>

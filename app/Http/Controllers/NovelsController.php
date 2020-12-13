@@ -33,8 +33,17 @@ class NovelsController extends Controller
       }else
       {
         echo "mauvais mot de passe pour la suppression";
+      }      
+    }
+
+    public function search(request $request){
+      if($request['search']->has('mythe')){
+        $novel = Novel::query()->where('title',$request['search']);
+        return view('pages.frontend.research', ['novel'=>$novel]);
+      }else{
+        dd($request['search']);
+        return 'erreur';
       }
-      
     }
 
     public function store(request $request){

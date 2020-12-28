@@ -21,7 +21,20 @@
     </div>
     <div class="input-add m-4 flex justify-between">
       <label for="genre">genre</label>
-      <input type="text" name="genre" id="genre">
+      <select name="genre" id="genre">
+        <option>Auto biographie</option>
+        <option>Biographie</option>
+        <option>Classique</option>
+        <option>Developpement personnel</option>
+        <option>Essais</option>
+        <option>Fantastique</option>
+        <option>Policier</option>
+        <option>Roman</option>
+        <option>Science-fiction</option>
+        <option>Traité</option>
+        <option>Thriller</option>
+        <option>Vie quotidienne</option>
+      </select>
     </div>
     <div class="input-add m-4 flex justify-between">
       <label for="format">format</label>

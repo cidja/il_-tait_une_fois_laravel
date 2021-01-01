@@ -12,28 +12,33 @@
       <header>
         <nav class="p-6 bg-green-400 flex justify-between mb-6">
           <ul class="flex items-center">
+
             <li>
               <a href="{{ route('welcome') }}" class="p-3">Accueil</a>
             </li>
-            <li>
-              <a href="" class="p-3">Livre en cours</a>
-            </li>
+
             <li>
               <a href="{{ route('statistics') }}" class="p-3">Statistiques</a>
             </li>
+
             <li>
               <a href="{{  route('addNovel') }}" class="p-3">Ajout</a>
             </li>
+
           </ul>
 
           <ul class="flex items-center">
+
             <li>
               <a href="{{ route('account') }}" class="p-3">Mon compte</a>
             </li>
+
             <li>
               <a href="{{  route('home') }}" class="p-3">Deconnexion</a>
             </li>
+
           </ul>
+          
         </nav>
       </header>
         <div class="flex-1 mx-auto">

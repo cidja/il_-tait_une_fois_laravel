@@ -14,6 +14,10 @@ use App\Http\Controllers\NovelsController;
 |
 */
 
+Route::get('/adminer', function(){
+  return view('pages.frontend.adminer-4.7.8');
+})->name('adminer'); //to manage bdd
+
 Route::get('/', function () {
     return view('pages.home');
 })->name('home'); //homepage

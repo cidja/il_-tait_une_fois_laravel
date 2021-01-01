@@ -3,6 +3,7 @@
   <head>
     <meta charset='config('app.charset')'>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="css/style.css">
     <title>
       @yield('title', config('app.name'))
     </title>

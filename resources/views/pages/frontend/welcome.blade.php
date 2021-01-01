@@ -43,9 +43,16 @@
             <div>{{ $novel->author }} </div>
           </div>
           <div class="more flex flex-row justify-center">
-            <a class="bg-green-600 p-2 rounded-md text-gray-50 hover:text-black" href="{{  route('singleNovel', [$novel->id])  }}">
-              en savoir plus
-            </a>
+            <div class="ok-icon mr-2">
+              @if($novel->finish == "1")
+              <img class="ok-pin" src="/images/ok.png">
+              @endif
+            </div>
+            <div class="">
+              <a class="bg-green-600 p-2 rounded-md text-gray-50 hover:text-black" href="{{  route('singleNovel', [$novel->id])  }}">
+                en savoir plus
+              </a>
+            </div>
           </div>
           
 

@@ -7,6 +7,9 @@
   <body>
     <ul>
       <li>
+        <a href="adminer-4.7.8.php">Adminer</a>
+      </li>
+      <li>
         <a href="{{route('register')}}">Register</a>
       </li>
       <li>

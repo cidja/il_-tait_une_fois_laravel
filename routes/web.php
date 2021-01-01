@@ -34,6 +34,8 @@ Route::get('/login', function() {
 Route::get('/welcome',[NovelsController::class, "index"])->name('welcome');
 //link video to display data https://www.youtube.com/watch?v=y3p10h_00A8&ab_channel=phpstepbystep
 
+Route::get('/list',[NovelsController::class, 'list'])->name('list');
+
 Route::get("/singleNovel/{id}", [NovelsController::class, "onlyOne"])->name('singleNovel');
 
 Route::get("/delete/{id}", [NovelsController::class, "deleteview"])->name('deleteview');

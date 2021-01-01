@@ -14,6 +14,11 @@ class NovelsController extends Controller
       return view('pages.frontend.welcome',['novels'=>$data]);
     }
 
+    function list(){
+      $novel= DB::table("novels")->orderBY('id','desc')->get();
+      return view('pages.frontend.list', ['novels'=>$novel]);
+    }
+
     function onlyOne($id){ //https://laravel.com/docs/8.x/queries#retrieving-a-single-row-column-from-a-table
       $data= DB::table("novels")->where('id',$id)->first();
       return view('pages.frontend.singleNovel',['novel'=>$data]);

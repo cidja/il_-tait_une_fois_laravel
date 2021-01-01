@@ -25,6 +25,10 @@
               <a href="{{  route('addNovel') }}" class="p-3">Ajout</a>
             </li>
 
+            <li>
+              <a href="{{  route('list')  }}" class="p-3">Liste complète</a>
+            </li>
+
           </ul>
 
           <ul class="flex items-center">

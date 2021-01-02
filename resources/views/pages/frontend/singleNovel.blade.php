@@ -67,38 +67,46 @@
           </div>
         </div>
 
-        <div class="creation-date flex flex-row justify-center">
+        <div class="date flex flex-row justify-center">
           <div class="mr-4">
             Début : 
           </div>
           <div>
-            @php //to display date in format that I want
-              $beginDate = new DateTime($novel->creation_date);
-              echo $beginDate->format("d/m/Y");
-            @endphp  
-          </div>
-        </div>
+            <?php  //to display date in format that I want
+              if($novel->begin_date == "0000-00-00 00:00:00"){
+                echo "non terminé ou non renseigné";
+              }else{
+                $beginDate = new DateTime($novel->creation_date);
+                echo $beginDate->format("d/m/Y");
+                ?> 
 
-        <div class="end-date flex flex-row justify-center">
-          <div class='mr-4'>
-            Fin : 
+          <div class="end-date flex flex-row justify-center">
+            <div class='mr-4'>
+              Fin : 
+            </div>
+            <div>
+              <?php
+                  $endDate = new DateTime($novel->end_date);
+                  echo $endDate->format("d/m/Y")
+              ?>
+            </div>
           </div>
-          <div>
-            @php
-                $endDate = new DateTime($novel->end_date);
-                echo $endDate->format("d/m/Y")
-            @endphp
-          </div>
-        </div>
 
         <div class="date-between flex flex-row justify-center">
           <div class="mr-4">
-          @php //to see the time in days to read the book
+          <?php //to see the time in days to read the book
               $interval = date_diff($beginDate, $endDate);
               echo $interval->format("Fini en %a jours");
-            @endphp
+            ?>
           </div>
         </div>
+        <?php
+              } 
+        ?>
+          </div>
+        </div>
+
+        
 
         <div class="comment flex flex-row justify-center">
           <div class="mr-4">

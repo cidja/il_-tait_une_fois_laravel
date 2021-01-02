@@ -53,10 +53,17 @@
                 <img class="nok-pin" src="/images/nok.png">
               @endif
             </div>
+            
             <div class="more-button">
               <a class="bg-green-600 p-2 rounded-md text-gray-50 hover:text-black" href="{{  route('singleNovel', [$novel->id])  }}">
                 en savoir plus
               </a>
+            </div>
+
+            <div class="ok-icon mr-2">
+              @if($novel->finish == "1")
+                <img class="ok-pin" src="/images/ok.png">
+              @endif
             </div>
           </div>
           

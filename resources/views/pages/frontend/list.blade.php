@@ -14,7 +14,9 @@
             @foreach($novels as $novel)
             <tr class="border-solid border-2">
                 <td>
-                    {{ $novel->title}}
+                    <a class=" hover:text-blue-800" href="{{  route('singleNovel', [$novel->id])  }}">
+                        {{ $novel->title}}
+                      </a>
                 </td>
                 <td>
                     {{ $novel->author}}

@@ -71,15 +71,23 @@
           <div class="mr-4">
             Début : 
           </div>
-          <div>
             <?php  //to display date in format that I want
-              if($novel->begin_date == "0000-00-00 00:00:00"){
-                echo "non terminé ou non renseigné";
+              $begin = $novel->begin_date;
+              $end = $novel->end_date;
+              if($novel->begin_date == "0000-00-00 00:00:00" || $begin == $end){
+                //si la date de fin est égal à la date de début c'est juste que c'était une 
+                //date par défaut donc indiqué en dessous 
+                ?>
+                <div>
+                  non terminé ou non renseigné
+                </div>
+          </div> {{-- fermant de div class="date" uniquement si if rempli --}}
+                <?php                
               }else{
                 $beginDate = new DateTime($novel->creation_date);
-                echo $beginDate->format("d/m/Y");
+                echo "<div>" . $beginDate->format("d/m/Y") . "</div>";
                 ?> 
-
+          </div>
           <div class="end-date flex flex-row justify-center">
             <div class='mr-4'>
               Fin : 
@@ -103,11 +111,7 @@
         <?php
               } 
         ?>
-          </div>
-        </div>
-
-        
-
+         
         <div class="comment flex flex-row justify-center">
           <div class="mr-4">
             Commentaire : 
@@ -120,7 +124,7 @@
             @endif
           </div>
         </div>
-
+     
         <div class="container flex flex-row justify-around mt-8">
           <div class="modif-button">
             <a class="bg-green-600 p-2 rounded-md text-gray-50 hover:text-black" href="{{  route('singleNovel', [$novel->id])  }}">

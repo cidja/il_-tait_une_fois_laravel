@@ -22,7 +22,7 @@
     <div class="input-add m-4 flex justify-between">
       <label for="genre">genre</label>
       <select name="genre" id="genre">
-        <option>Auto biographie</option>
+        <option>Autobiographie</option>
         <option>Biographie</option>
         <option>Classique</option>
         <option>Developpement personnel</option>

@@ -127,7 +127,7 @@
      
         <div class="container flex flex-row justify-around mt-8">
           <div class="modif-button">
-            <a class="bg-green-600 p-2 rounded-md text-gray-50 hover:text-black" href="{{  route('singleNovel', [$novel->id])  }}">
+            <a class="bg-green-600 p-2 rounded-md text-gray-50 hover:text-black" href="{{  route('infoUpdate', [$novel->id])  }}">
               modifier
             </a>
           </div>

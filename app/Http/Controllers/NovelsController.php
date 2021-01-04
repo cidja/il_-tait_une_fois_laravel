@@ -24,6 +24,11 @@ class NovelsController extends Controller
       return view('pages.frontend.singleNovel',['novel'=>$data]);
     }
 
+    function infoUpdate($id){
+      $data = DB::table("novels")->where('id',$id)->first();
+      return view('pages.frontend.updateNovel', ['novel'=>$data]);
+    }
+
     function deleteview($id){
       $novel = Novel::query()->Where('id',$id)->first();
       return view('pages.frontend.delete',['novel'=>$novel]);

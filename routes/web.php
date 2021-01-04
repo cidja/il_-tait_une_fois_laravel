@@ -38,6 +38,8 @@ Route::get('/list',[NovelsController::class, 'list'])->name('list');
 
 Route::get("/singleNovel/{id}", [NovelsController::class, "onlyOne"])->name('singleNovel');
 
+Route::get("/updateNovel/{id}", [NovelsController::class, "infoUpdate"])->name("infoUpdate");
+
 Route::get("/delete/{id}", [NovelsController::class, "deleteview"])->name('deleteview');
 
 Route::post("deleteConfirm/{id}", [NovelsController::class, "deleteConfirm"])->name('deleteConfirm');

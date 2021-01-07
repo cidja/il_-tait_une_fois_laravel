@@ -40,6 +40,8 @@ Route::get("/singleNovel/{id}", [NovelsController::class, "onlyOne"])->name('sin
 
 Route::get("/updateNovel/{id}", [NovelsController::class, "infoUpdate"])->name("infoUpdate");
 
+Route::post("", [NovelsController::class, 'confirmUpdate'])->name('confirmUpdate');
+
 Route::get("/delete/{id}", [NovelsController::class, "deleteview"])->name('deleteview');
 
 Route::post("deleteConfirm/{id}", [NovelsController::class, "deleteConfirm"])->name('deleteConfirm');

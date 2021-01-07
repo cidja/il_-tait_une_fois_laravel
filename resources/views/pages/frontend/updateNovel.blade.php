@@ -7,9 +7,9 @@
 <!--Dans cette partie ce sera la partie que j'ai mis en yield dans app.php !-->
 id = {{ $novel->id}}
 <div class="container flex justify-around mb-4 py-10 bg-gradient-to-r from-green-400 to-blue-500 rounded-md px-10">
-    <form class="flex justify-end flex-col" action="" method="post">
+    <form class="flex justify-end flex-col" action="{{ route('confirmUpdate') }}" method="post">
     @csrf
-
+      <input type='hidden' value= '{{ $novel->id  }}'>
       <div class="title mb-3">
         <div class="input-add  flex justify-between">
           <label for="title">Titre de l'ouvrage</label>

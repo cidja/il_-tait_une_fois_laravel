@@ -29,6 +29,29 @@ class NovelsController extends Controller
       return view('pages.frontend.updateNovel', ['novel'=>$data]);
     }
 
+    function confirmUpdate(request $request){
+      
+      $id         = $request['id'];
+      $title      = $request['title'];
+      $author     = $request['author'];
+      $isbn       = $request['isbn'];
+      $genre      = $request['genre'];
+      $format     = $request['format'];
+      $page_count = $request['pageCount'];
+      $cover      = $request['cover'];
+
+      $data = DB::table("novels")->where('id', $id)->update([
+        'title'       => $request['title'],
+        'author'      => $request['author'],
+        'isbn'        => $request['isbn'],
+        'genre'       => $request['genre'],
+        'format'      => $request['format'],
+        'page_count'  => $request['pageCount'],
+        'cover'       => $request['cover']
+      ]);
+      return redirect()->route('welcome');
+    }
+
     function deleteview($id){
       $novel = Novel::query()->Where('id',$id)->first();
       return view('pages.frontend.delete',['novel'=>$novel]);

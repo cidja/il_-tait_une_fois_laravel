@@ -45,7 +45,18 @@ class NovelsController extends Controller
       return redirect()->route('welcome');
     }
 
-    
+    function statistics(){
+      $pagesTotal = DB::table("novel")->sum('page_count');
+      $bookTotal  = DB::table('novel')->count('title');
+      $avgPages   = DB::table('novel')->avg('page_count');
+      //print_r($data);
+     return view('pages.frontend.statistics', [
+    'pagesTotal'=>$pagesTotal,
+    'bookTotal'=> $bookTotal,
+    'avgPages'=> $avgPages
+     ]);
+
+    }
     
 
     function deleteview($id){

@@ -46,9 +46,8 @@ Route::get("/delete/{id}", [NovelsController::class, "deleteview"])->name('delet
 
 Route::post("deleteConfirm/{id}", [NovelsController::class, "deleteConfirm"])->name('deleteConfirm');
 
-Route::get('/statistics', function(){
-  return view('pages.frontend.statistics');
-})->name('statistics');// to display some statistics about your read
+Route::get('/statistics', [NovelsController::class, 'statistics'])->name('statistics');// to display some statistics about your read
+
 
 //to display form add novel
 Route::get('/addNovel', function(){ 

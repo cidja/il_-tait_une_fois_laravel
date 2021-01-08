@@ -45,6 +45,9 @@ class NovelsController extends Controller
       return redirect()->route('welcome');
     }
 
+    
+    
+
     function deleteview($id){
       $novel = Novel::query()->Where('id',$id)->first();
       return view('pages.frontend.delete',['novel'=>$novel]);

@@ -5,11 +5,10 @@
 
 @section('content')
 <!--Dans cette partie ce sera la partie que j'ai mis en yield dans app.php !-->
-id = {{ $novel->id}}
 <div class="container flex justify-around mb-4 py-10 bg-gradient-to-r from-green-400 to-blue-500 rounded-md px-10">
     <form class="flex justify-end flex-col" action="{{ route('confirmUpdate') }}" method="post">
     @csrf
-      <input type='hidden' value= '{{ $novel->id  }}'>
+      <input type='hidden' value= '{{ $novel->id  }}' name='id'>
       <div class="title mb-3">
         <div class="input-add  flex justify-between">
           <label for="title">Titre de l'ouvrage</label>
@@ -88,20 +87,25 @@ id = {{ $novel->id}}
         </div>
       </div>
 
-      <div class="cover w-1/5">
-          <img src="{{  $novel->cover  }}" alt="couverture du livre">
+      <div class="flex flex-row justify-around">
+        <div class="flex flex-row items-center ">
+          <div class="cover mb-3">
+            <div class="input-add mb-5">
+              <label for="cover">Couverture</label>
+            </div>
+            <div class="">
+              <input class="border-2 rounded-lg pl-2" type="text" name="cover" id="cover" value="{{ $novel->cover  }}">
+            </div>
+          </div>
+        </div>
+
+        <div class="cover w-1/5">
+            <img src="{{  $novel->cover  }}" alt="couverture du livre">
+        </div>
       </div>
 
-      <div class="cover mb-3">
-        <div class="input-add  flex justify-between">
-          <label for="cover">Couverture</label>
-        </div>
-        <div class="flex flex-col">
-          <input class="border-2 rounded-lg pl-2" type="text" name="cover" id="cover" value="{{ $novel->cover  }}">
-        </div>
-      </div>
       <div class="submitbutton flex justify-center">
-        <input class="py-2 px-20 text-xl border-2 border-blue-500 rounded-xl  bg-blue-500 hover:bg-blue-800" type="submit" name="add-submit" value="valider">
+        <input class="mt-5 py-2 px-20 text-xl border-2 border-blue-500 rounded-xl  bg-blue-500 hover:bg-blue-800" type="submit" name="add-submit" value="valider">
       </div>
     </form>
   </div>

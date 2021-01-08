@@ -29,18 +29,11 @@ class NovelsController extends Controller
       return view('pages.frontend.updateNovel', ['novel'=>$data]);
     }
 
-    function confirmUpdate(request $request){
+    function confirmUpdate(Request $request){
       
-      $id         = $request['id'];
-      $title      = $request['title'];
-      $author     = $request['author'];
-      $isbn       = $request['isbn'];
-      $genre      = $request['genre'];
-      $format     = $request['format'];
-      $page_count = $request['pageCount'];
-      $cover      = $request['cover'];
-
-      $data = DB::table("novels")->where('id', $id)->update([
+      $id = $request['id'];
+      //on peux aussi écrire Novel::query()->find($id)->update([])
+      DB::table('novels')->where('id',$id)->update([
         'title'       => $request['title'],
         'author'      => $request['author'],
         'isbn'        => $request['isbn'],
